@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Testimonials } from "@/_components/ui/Testimonials";
+import { Testimonials } from "@/components/ui/Testimonials";
 import { AboutHero } from "./_components/AboutHero";
 import { Certifications } from "./_components/Certifications";
 

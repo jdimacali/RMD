@@ -1,4 +1,4 @@
-import { Container } from "@/_components/ui/Container";
+import { Container } from "@/components/ui/Container";
 import { Calculator, Receipt, FileSpreadsheet, Building } from "lucide-react";
 import Link from "next/link";
 
@@ -53,7 +53,7 @@ export function Services() {
               <Link
                 key={service.name}
                 href={service.href}
-                className="group hover-lift"
+                className="group hover-lift rounded-xl hover:shadow-xl transition-all"
               >
                 <div className="flex flex-col p-4">
                   <dt className="text-base font-semibold leading-7 text-gray-900">

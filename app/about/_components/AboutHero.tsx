@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Container } from "@/_components/ui/Container";
+import { Container } from "@/components/ui/Container";
 
 interface StatProps {
   label: string;

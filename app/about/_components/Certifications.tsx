@@ -1,4 +1,4 @@
-import { Container } from "@/_components/ui/Container";
+import { Container } from "@/components/ui/Container";
 import { Award, BookOpen, Users2, Building2 } from "lucide-react";
 
 interface CertificationProps {

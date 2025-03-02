@@ -1,4 +1,4 @@
-import { Container } from "@/_components/ui/Container";
+import { Container } from "@/components/ui/Container";
 import { ContactForm } from "./_components/ContactForm";
 import { Map } from "./_components/Map";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
@@ -12,9 +12,20 @@ export const metadata = {
 export default function Contact() {
   return (
     <Container>
-      <div className="py-16 sm:py-24">
-        <ContactForm />
-        <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-2">
+      <div className="py-24 sm:py-32">
+        <div className="mx-auto max-w-2xl text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-6xl">
+            Get in Touch
+          </h1>
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+            Ready to take control of your finances? Fill out the form below and
+            we&apos;ll get back to you within one business day.
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl">
+          <ContactForm />
+        </div>
+        <div className="mx-auto mt-24 grid max-w-7xl grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-2">
           <div className="space-y-6">
             <div className="flex items-center gap-x-4">
               <MapPin className="h-6 w-6 text-primary flex-shrink-0" />
@@ -53,7 +64,9 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <Map />
+          <div className="lg:pl-8">
+            <Map />
+          </div>
         </div>
       </div>
     </Container>

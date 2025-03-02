@@ -8,15 +8,13 @@ interface LogoProps {
 export function Logo({ className }: LogoProps) {
   return (
     <div className={cn("flex items-center", className)}>
-      <div className="relative h-12 w-12">
-        <Image
-          src="/logo/logo-transparent-independent.svg"
-          alt="RMD Accounting & Tax Services Logo"
-          fill
-          className="object-contain"
-          priority
-        />
-      </div>
+      <Image
+        src="/logo/independent-logo.png"
+        alt="RMD Accounting & Tax Services Logo"
+        width={64}
+        height={64}
+        priority
+      />
       <div className="ml-3 flex flex-col">
         <div className="text-xl font-bold text-primary whitespace-nowrap">
           RMD

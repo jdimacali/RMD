@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Container } from "@/_components/ui/Container";
-import { Logo } from "@/_components/ui/Logo";
+import { Container } from "../ui/Container";
+import { Logo } from "@/components/ui/Logo";
 
 const navigation = {
   services: [
@@ -30,7 +30,9 @@ export function Footer() {
       <Container className="pb-8 pt-16 sm:pt-24">
         <div className="mx-auto max-w-7xl xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <Logo className="text-white" />
+            <div className="flex items-center">
+              <Logo className="[&_div]:text-white [&_div:last-child]:text-accent" />
+            </div>
             <p className="text-sm leading-6 text-accent">
               Professional accounting and tax services for healthcare
               professionals and businesses in the Greater Los Angeles area.

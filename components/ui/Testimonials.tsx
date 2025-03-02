@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Container } from "@/_components/ui/Container";
+import { Container } from "@/components/ui/Container";
 
 interface Testimonial {
   content: string;
@@ -42,8 +42,8 @@ export function Testimonials() {
             Trusted by Healthcare Professionals
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Don&apos;t just take our word for it. Here&apos;s what our clients have to say
-            about working with RMD Accounting & Tax Services.
+            Don&apos;t just take our word for it. Here&apos;s what our clients
+            have to say about working with RMD Accounting & Tax Services.
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">

@@ -1,4 +1,4 @@
-import { Container } from "@/_components/ui/Container";
+import { Container } from "@/components/ui/Container";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 

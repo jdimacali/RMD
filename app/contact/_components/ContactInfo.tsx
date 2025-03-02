@@ -1,4 +1,4 @@
-import { Container } from "@/_components/ui/Container";
+import { Container } from "@/components/ui/Container";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const contactDetails = [

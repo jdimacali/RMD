@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { cn } from "@/lib/utils";
 
 interface FormData {
   name: string;
@@ -52,15 +51,6 @@ export function ContactForm() {
 
   return (
     <div className="mx-auto max-w-2xl">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-5xl">
-          Get in Touch
-        </h1>
-        <p className="mt-6 text-lg leading-8 text-gray-600">
-          Ready to take control of your finances? Fill out the form below and
-          we'll get back to you within one business day.
-        </p>
-      </div>
       <form onSubmit={handleSubmit} className="mt-16 space-y-8">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>

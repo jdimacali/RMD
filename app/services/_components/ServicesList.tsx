@@ -1,6 +1,6 @@
 "use client";
 
-import { Container } from "@/_components/ui/Container";
+import { Container } from "@/components/ui/Container";
 import {
   Calculator,
   Receipt,

@@ -2,14 +2,16 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Container } from "@/_components/ui/Container";
-import { Logo } from "@/_components/ui/Logo";
+import { Container } from "@/components/ui/Container";
+import { Logo } from "@/components/ui/Logo";
 import { Menu, X, ArrowRight } from "lucide-react";
 
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "FAQ", href: "/faq" },
   { name: "Contact", href: "/contact" },
 ];
 
