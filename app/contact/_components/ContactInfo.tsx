@@ -34,7 +34,7 @@ export function ContactInfo() {
               Our Office
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600 animate-fade-in-up">
-              Visit our office in the heart of Los Angeles. We're conveniently
+              Visit our office in the heart of Los Angeles. We are conveniently
               located to serve clients throughout the Greater Los Angeles area.
             </p>
             <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2">

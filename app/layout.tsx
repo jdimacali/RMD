@@ -79,7 +79,7 @@ export default function RootLayout({
       </head>
       <body>
         <Navbar />
-        <main className="relative">{children}</main>
+        <main className="relative py-12">{children}</main>
         <Footer />
       </body>
     </html>

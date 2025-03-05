@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { Container } from "@/components/ui/Container";
 
 const faqs = [
   {
@@ -52,64 +53,68 @@ export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-            Frequently Asked Questions
-          </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Find answers to common questions about our services and how we help
-            healthcare professionals manage their finances.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-3xl">
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="rounded-lg border border-gray-200 p-6 hover:shadow-md transition-shadow duration-200"
-              >
-                <button
-                  className="flex w-full items-center justify-between text-left"
-                  onClick={() =>
-                    setOpenIndex(openIndex === index ? null : index)
-                  }
+    <div className="relative">
+      <Container className="py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-5xl">
+              Frequently Asked Questions
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-zinc-600">
+              Find answers to common questions about our services and how we
+              help healthcare professionals manage their finances.
+            </p>
+          </div>
+          <div className="mx-auto mt-16 max-w-3xl">
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  className="rounded-lg bg-white/60 p-6 ring-1 ring-zinc-200 hover:shadow-md transition-shadow duration-200"
                 >
-                  <h3 className="font-semibold text-gray-900">
-                    {faq.question}
-                  </h3>
-                  {openIndex === index ? (
-                    <ChevronUp className="h-5 w-5 text-gray-500" />
-                  ) : (
-                    <ChevronDown className="h-5 w-5 text-gray-500" />
+                  <button
+                    className="flex w-full items-center justify-between text-left"
+                    onClick={() =>
+                      setOpenIndex(openIndex === index ? null : index)
+                    }
+                  >
+                    <h3 className="text-base font-semibold leading-7 text-zinc-900">
+                      {faq.question}
+                    </h3>
+                    {openIndex === index ? (
+                      <ChevronUp className="h-5 w-5 text-primary" />
+                    ) : (
+                      <ChevronDown className="h-5 w-5 text-primary" />
+                    )}
+                  </button>
+                  {openIndex === index && (
+                    <p className="mt-4 text-sm leading-6 text-zinc-600">
+                      {faq.answer}
+                    </p>
                   )}
-                </button>
-                {openIndex === index && (
-                  <p className="mt-4 text-gray-600">{faq.answer}</p>
-                )}
-              </div>
-            ))}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="mx-auto max-w-2xl text-center mt-20">
+            <h2 className="text-3xl font-bold tracking-tight text-primary">
+              Still have questions?
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-zinc-600">
+              Can&apos;t find the answer you&apos;re looking for? We&apos;re
+              here to help with any questions about our services.
+            </p>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <a
+                href="/contact"
+                className="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              >
+                Contact Us
+              </a>
+            </div>
           </div>
         </div>
-        <div className="mx-auto max-w-2xl text-center mt-20">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-            Still have questions?
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Can't find the answer you're looking for? We're here to help with
-            any questions about our services.
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
-              href="/contact"
-              className="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-            >
-              Contact Us
-            </a>
-          </div>
-        </div>
-      </div>
+      </Container>
     </div>
   );
 }

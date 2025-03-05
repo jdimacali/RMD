@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export function ServicesHero() {
   return (
-    <div className="relative isolate overflow-hidden bg-gradient-to-b from-primary/5 via-primary/10 to-transparent pt-16">
+    <div className="relative isolate overflow-hidden bg-gradient-to-b from-primary/5 via-primary/10 to-transparent">
       <Container className="py-24 sm:py-32">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-6xl">

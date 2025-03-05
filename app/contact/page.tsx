@@ -11,8 +11,8 @@ export const metadata = {
 
 export default function Contact() {
   return (
-    <Container>
-      <div className="py-24 sm:py-32">
+    <div className="relative isolate overflow-hidden">
+      <Container className="py-24 sm:py-32">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-6xl">
             Get in Touch
@@ -68,7 +68,7 @@ export default function Contact() {
             <Map />
           </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </div>
   );
 }
