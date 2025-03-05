@@ -2,36 +2,42 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Navbar } from "./_components/layout/Navbar";
 import { Footer } from "./_components/layout/Footer";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://rmdaccounting.com"),
   title: {
+    default: "RMD Accounting & Tax Services",
     template: "%s | RMD Accounting & Tax Services",
-    default:
-      "RMD Accounting & Tax Services | Los Angeles Healthcare Accounting",
   },
   description:
-    "Professional accounting and tax services for healthcare professionals and businesses in the Greater Los Angeles area. Specializing in medical and dental practice accounting.",
+    "Professional accounting and tax services for healthcare professionals and businesses in the Greater Los Angeles area.",
+  keywords: [
+    "accounting",
+    "tax services",
+    "bookkeeping",
+    "payroll",
+    "CFO services",
+    "Los Angeles",
+    "healthcare accounting",
+  ],
+  authors: [{ name: "Rosalind M. Dimacali" }],
+  creator: "RMD Accounting & Tax Services",
   icons: {
     icon: "/logo/independent-logo.png",
     shortcut: "/logo/independent-logo.png",
     apple: "/logo/independent-logo.png",
   },
   openGraph: {
-    title: "RMD Accounting & Tax Services | Los Angeles Healthcare Accounting",
-    description:
-      "Professional accounting and tax services for healthcare professionals and businesses in the Greater Los Angeles area. Specializing in medical and dental practice accounting.",
-    url: "https://www.rmdaccounting.com",
-    siteName: "RMD Accounting & Tax Services",
-    locale: "en_US",
     type: "website",
-    images: [
-      {
-        url: "/logo/independent-logo.png",
-        width: 800,
-        height: 800,
-        alt: "RMD Accounting & Tax Services Logo",
-      },
-    ],
+    locale: "en_US",
+    url: "https://rmdaccounting.com",
+    title: "RMD Accounting & Tax Services",
+    description:
+      "Professional accounting and tax services for healthcare professionals and businesses in the Greater Los Angeles area.",
+    siteName: "RMD Accounting & Tax Services",
   },
   robots: {
     index: true,
@@ -45,9 +51,10 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "RMD Accounting & Tax Services",
     card: "summary_large_image",
-    images: ["/logo/independent-logo.png"],
+    title: "RMD Accounting & Tax Services",
+    description:
+      "Professional accounting and tax services for healthcare professionals and businesses in the Greater Los Angeles area.",
   },
   verification: {
     google: "google-site-verification-code",
@@ -63,7 +70,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full scroll-smooth">
       <head>
         <link
           rel="icon"
@@ -77,7 +84,7 @@ export default function RootLayout({
           href="/logo/independent-logo.png"
         />
       </head>
-      <body>
+      <body className={`${inter.className} h-full antialiased`}>
         <Navbar />
         <main className="relative pt-12">{children}</main>
         <Footer />

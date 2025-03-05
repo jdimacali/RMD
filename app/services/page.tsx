@@ -4,13 +4,13 @@ import { ServicesList } from "./_components/ServicesList";
 import { CTA } from "../_components/sections/CTA";
 
 export const metadata: Metadata = {
-  title: "Services | RMD Accounting & Tax Services",
+  title: "Professional Accounting & Tax Services | RMD Accounting",
   description:
-    "Comprehensive accounting, tax, and financial services for healthcare professionals and businesses in the Greater Los Angeles area. Specializing in medical and dental practice accounting.",
+    "Comprehensive accounting services including bookkeeping, tax planning, payroll management, and CFO advisory services for healthcare professionals in Los Angeles.",
   openGraph: {
-    title: "Services | RMD Accounting & Tax Services",
+    title: "Professional Accounting & Tax Services | RMD Accounting",
     description:
-      "Comprehensive accounting, tax, and financial services for healthcare professionals and businesses in the Greater Los Angeles area. Specializing in medical and dental practice accounting.",
+      "Comprehensive accounting services including bookkeeping, tax planning, payroll management, and CFO advisory services for healthcare professionals in Los Angeles.",
   },
 };
 

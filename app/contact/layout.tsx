@@ -1,9 +1,14 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact | RMD Accounting & Tax Services",
+  title: "Contact Us | RMD Accounting & Tax Services",
   description:
-    "Get in touch with RMD Accounting & Tax Services for professional accounting and tax services. Located in Los Angeles, CA.",
+    "Get in touch with RMD Accounting & Tax Services. We're here to help healthcare professionals in Los Angeles with their accounting and tax needs. Schedule a consultation today.",
+  openGraph: {
+    title: "Contact Us | RMD Accounting & Tax Services",
+    description:
+      "Get in touch with RMD Accounting & Tax Services. We're here to help healthcare professionals in Los Angeles with their accounting and tax needs. Schedule a consultation today.",
+  },
 };
 
 export default function ContactLayout({

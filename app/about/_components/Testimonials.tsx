@@ -99,8 +99,8 @@ export function Testimonials() {
   }, [isPaused, scrollPosition]);
 
   return (
-    <div className="py-24 sm:py-32 bg-white">
-      <Container className="max-w-[110rem]">
+    <div className="py-24 sm:py-32 bg-white overflow-hidden">
+      <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -116,21 +116,20 @@ export function Testimonials() {
           </p>
         </motion.div>
 
-        <div className="relative mx-[-2rem]">
+        <div className="relative">
           {/* Gradient masks */}
-          <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-white via-white/90 to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-white via-white/90 to-transparent z-10" />
+          <div className="hidden sm:block absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-white via-white/90 to-transparent z-10" />
+          <div className="hidden sm:block absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-white via-white/90 to-transparent z-10" />
 
           {/* Carousel container */}
           <div
             ref={containerRef}
-            className="flex gap-8 overflow-x-auto no-scrollbar px-8 py-8"
+            className="flex gap-8 overflow-x-auto no-scrollbar px-8 py-8 -mx-8 sm:mx-0"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
             onTouchStart={() => setIsPaused(true)}
             onTouchEnd={() => {
               setIsPaused(false);
-              // Reset position if we're past halfway
               if (
                 containerRef.current &&
                 containerRef.current.scrollLeft >
@@ -146,13 +145,14 @@ export function Testimonials() {
               msOverflowStyle: "none",
             }}
           >
+            {/* Double the testimonials for seamless loop */}
             {[...testimonials, ...testimonials].map((testimonial, idx) => (
               <motion.div
                 key={`${testimonial.author}-${idx}`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="flex-none w-[350px] sm:w-[400px]"
+                className="flex-none w-[320px] sm:w-[380px]"
               >
                 <div className="relative h-full flex flex-col justify-between bg-white p-8 shadow-lg ring-1 ring-gray-200 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
                   {/* Quote icon */}

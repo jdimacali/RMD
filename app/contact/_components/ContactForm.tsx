@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { toast } from "sonner";
 
 interface FormData {
   name: string;
@@ -28,7 +29,6 @@ const services = [
   { value: "payroll", label: "Payroll Services" },
   { value: "planning", label: "Financial Planning" },
   { value: "advisory", label: "Business Advisory" },
-  { value: "healthcare", label: "Healthcare Accounting" },
   { value: "startup", label: "New Business Setup" },
   { value: "cfo", label: "CFO Services" },
 ];
@@ -40,11 +40,28 @@ export function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsSubmitting(false);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      toast.success("Message sent successfully! We'll get back to you soon.");
+      setFormData(initialFormData);
+    } catch (error) {
+      console.error("Error sending message:", error);
+      toast.error("Failed to send message. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (

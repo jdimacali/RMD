@@ -2,8 +2,8 @@
 
 import { Container } from "@/components/ui/Container";
 import { ContactForm } from "./_components/ContactForm";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { motion } from "framer-motion";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export default function Contact() {
   return (

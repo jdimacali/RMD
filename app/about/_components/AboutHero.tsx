@@ -13,10 +13,10 @@ interface StatProps {
 }
 
 const stats: StatProps[] = [
-  { label: "Years of Experience", value: "15+", endValue: 15 },
+  { label: "Years Experience", value: "15+", endValue: 15 },
   { label: "Healthcare Clients", value: "100+", endValue: 100 },
   { label: "Tax Returns Filed", value: "1000+", endValue: 1000 },
-  { label: "Client Retention Rate", value: "98%", endValue: 98 },
+  { label: "Retention Rate", value: "98%", endValue: 98 },
 ];
 
 function AnimatedNumber({ value }: { value: number }) {
@@ -125,7 +125,7 @@ export function AboutHero() {
             </motion.p>
             <div
               ref={statsRef}
-              className="mt-12 grid grid-cols-2 gap-8 sm:grid-cols-4"
+              className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-8"
             >
               {stats.map((stat) => (
                 <motion.div
@@ -137,14 +137,12 @@ export function AboutHero() {
                   transition={{ duration: 0.6, delay: 0.3 }}
                   className="flex flex-col gap-y-3 border-l-2 border-primary/20 pl-6"
                 >
-                  <dt className="text-sm font-medium leading-6 text-zinc-600">
+                  <dt className="text-sm font-medium leading-5 text-zinc-600 h-10 sm:h-auto">
                     {stat.label}
                   </dt>
                   <dd
-                    className={`text-[2.5rem] sm:text-[2.5rem] font-bold tracking-tight text-primary ${
-                      stat.endValue >= 1000
-                        ? "text-[2.5rem] sm:text-[2.5rem]"
-                        : ""
+                    className={`order-first text-3xl sm:text-4xl font-bold tracking-tight text-primary ${
+                      stat.endValue >= 1000 ? "text-2xl sm:text-3xl" : ""
                     }`}
                   >
                     <AnimatedNumber value={stat.endValue} />

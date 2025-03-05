@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Testimonials } from "@/app/about/_components/Testimonials";
 import { AboutHero } from "./_components/AboutHero";
+import { Testimonials } from "./_components/Testimonials";
 import { Certifications } from "./_components/Certifications";
 
 export const metadata: Metadata = {
-  title: "About Rosalind M. Dimacali | RMD Accounting & Tax Services",
+  title: "About Us | RMD Accounting & Tax Services",
   description:
-    "Meet Rosalind M. Dimacali, a certified public accountant with over 15 years of experience in healthcare accounting and tax services in the Greater Los Angeles area.",
+    "Meet Rosalind M. Dimacali and our dedicated team of accounting professionals. Learn about our mission to provide exceptional accounting and tax services to healthcare professionals in Los Angeles.",
   openGraph: {
-    title: "About Rosalind M. Dimacali | RMD Accounting & Tax Services",
+    title: "About Us | RMD Accounting & Tax Services",
     description:
-      "Meet Rosalind M. Dimacali, a certified public accountant with over 15 years of experience in healthcare accounting and tax services in the Greater Los Angeles area.",
+      "Meet Rosalind M. Dimacali and our dedicated team of accounting professionals. Learn about our mission to provide exceptional accounting and tax services to healthcare professionals in Los Angeles.",
   },
 };
 
