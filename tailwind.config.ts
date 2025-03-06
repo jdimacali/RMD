@@ -10,6 +10,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        primary: {
+          DEFAULT: "#2A5353",
+          light: "#3A6363",
+          dark: "#1B4242",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "#5C8374",
+          light: "#6D9485",
+          dark: "#4B7263",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        accent: {
+          DEFAULT: "#9EC8B9",
+          light: "#B0D4C7",
+          dark: "#8CBCA9",
+          foreground: "hsl(var(--accent-foreground))",
+        },
         background: "#F1F6F4",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -20,23 +38,9 @@ const config: Config = {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
         },
-        primary: "hsl(var(--primary))",
-        "primary-dark": "hsl(var(--primary-dark))",
-        secondary: {
-          DEFAULT: "#5C8374",
-          light: "#6D9485",
-          dark: "#4B7263",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "#9EC8B9",
-          light: "#B0D4C7",
-          dark: "#8CBCA9",
-          foreground: "hsl(var(--accent-foreground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
